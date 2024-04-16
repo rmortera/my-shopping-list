@@ -30,9 +30,9 @@ body {
 }
 
 .shopping-list {
-  display: grid;
-  margin: 100px;
-  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .header {
@@ -120,7 +120,9 @@ input {
 
 .list ul {
   list-style: none;
-  width: 80%;
+  width: 100%;
+  padding: 4rem 4rem;
+
   /* overflow: scroll; */
 
   display: grid;
@@ -128,6 +130,9 @@ input {
   gap: 1.2rem;
   justify-content: center;
   align-content: start;
+  align-items: stretch;
+  overflow: auto;
+  height: 360px;
 }
 
 .list li {
@@ -162,7 +167,7 @@ input[type="checkbox"] {
 @media (max-width: 900px), (max-height: 720px) {
   .shopping-list {
     display: grid;
-    margin: 100px 100px;
+    margin: auto;
     border-radius: 25px;
   }
 
@@ -228,6 +233,7 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+    height: 100%;
   }
 
   .actions {
@@ -253,10 +259,8 @@ input[type="checkbox"] {
     width: 80%;
     /* overflow: scroll; */
     font-size: 1rem;
-    float: left;
     width: 300px;
     overflow-y: auto;
-    height: 300px;
   }
 
   input[type="checkbox"] {
