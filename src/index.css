@@ -57,7 +57,6 @@ body {
 
 .add-form {
   background-color: #2d3142;
-  color: #d8d5db;
   padding: 2.8rem 0;
   display: flex;
   align-items: center;
@@ -65,10 +64,14 @@ body {
   gap: 0.8rem;
 }
 
-h3 {
-  margin-right: 1.6rem;
+.add-form-title {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  align-items: center;
   font-size: 2.4rem;
-  padding: 0 2.4rem;
+  color: #d8d5db;
+  background-color: #2d3142;
 }
 
 button,
@@ -84,7 +87,6 @@ input {
   cursor: pointer;
 }
 
-.add-form button,
 .actions button {
   text-transform: uppercase;
   background-color: #adacb5;
@@ -155,4 +157,129 @@ input[type="checkbox"] {
   text-align: center;
   font-weight: 700;
   padding: 3.2rem 0;
+}
+
+@media (max-width: 900px), (max-height: 720px) {
+  .shopping-list {
+    display: grid;
+    margin: 100px 100px;
+    border-radius: 25px;
+  }
+
+  .header {
+    align-self: stretch;
+  }
+
+  .header h1 {
+    color: #2f3e46;
+    background-color: #b0d7ff;
+    font-family: "DM Sans";
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    word-spacing: 15px;
+    position: relative;
+    padding: 2.4rem 0;
+    width: 100%;
+    display: block;
+  }
+
+  .add-form {
+    background-color: #2d3142;
+    color: #d8d5db;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+  }
+
+  h3 {
+    margin-right: 1.6rem;
+    font-size: 1.2rem;
+    padding: 0 2.4rem;
+  }
+
+  button,
+  input {
+    background-color: #d8d5db;
+    color: #2f3e46;
+    font-family: inherit;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 1.6rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .add-form button,
+  .actions button {
+    text-transform: uppercase;
+    background-color: #adacb5;
+  }
+
+  .list {
+    background-color: #d8d5db;
+    color: #2d3142;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .actions button,
+  .actions select {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1rem;
+  }
+
+  .list select {
+    background-color: #eae8ff;
+    color: #2f3e46;
+  }
+
+  .list ul {
+    list-style: none;
+    width: 80%;
+    /* overflow: scroll; */
+    font-size: 1rem;
+    float: left;
+    width: 300px;
+    overflow-y: auto;
+    height: 300px;
+  }
+
+  input[type="checkbox"] {
+    height: 1.2rem;
+    width: 1.2rem;
+    accent-color: #2d3142;
+  }
+
+  .list li button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.4rem;
+    transform: translateY(2px);
+  }
+
+  .stats {
+    background-color: #2d3142;
+    color: #d8d5db;
+    text-align: center;
+    font-weight: 700;
+    padding: 3.2rem 0;
+    font-size: 1.5rem;
+  }
 }

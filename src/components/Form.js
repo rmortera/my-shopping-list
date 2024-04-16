@@ -20,17 +20,20 @@ function Form({ onAddItems }) {
   }
 
   return (
-    <form className="add-form" onSubmit={handleSubmit}>
-      <h3>What do you need to buy?</h3>
-
-      <input
-        type="text"
-        placeholder="Enter item"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
-      ></input>
-      <button>Add item</button>
-    </form>
+    <>
+      <div className="add-form-title">
+        <h3>What do you need to buy?</h3>
+      </div>
+      <form className="add-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Enter item"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        ></input>
+        <button>Add item</button>
+      </form>
+    </>
   );
 }
 
